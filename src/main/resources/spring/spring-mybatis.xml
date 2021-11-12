@@ -12,7 +12,8 @@
     </context:component-scan>
 
     <!--引入properties文件-->
-    <bean id="placeholderConfigurer" class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">
+    <!--<context:property-placeholder location="classpath:jdbc.properties"/>-->
+    <bean id="placeholderConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="location" value="classpath:jdbc.properties"/>
     </bean>
 
